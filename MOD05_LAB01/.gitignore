@@ -1,0 +1,6 @@
+provider.tf
+.terraform
+.terraform.lock.hcl
+terraform.tfstate
+terraform_log.txt
+terraform.tfstate
