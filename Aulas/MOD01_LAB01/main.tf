@@ -21,6 +21,15 @@ resource "azurerm_subnet" "sub-tftec" {
   
 }
 
+# Create subnet 2
+resource "azurerm_subnet" "sub-tftec-02" {
+  name                 = "sub-tftec-from-terraform-02"
+  resource_group_name  = azurerm_resource_group.rg-tftec.name
+  virtual_network_name = azurerm_virtual_network.vnet-tftec.name
+  address_prefixes     = ["10.0.2.0/24"]
+  
+}
+
 # Create Network Security Group (NSG)
 resource "azurerm_network_security_group" "nsg-tftec" {
   name                = "nsg-tftec-from-terraform"
